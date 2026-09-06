@@ -1,49 +1,43 @@
 # Mantenimiento ITS
 
-Aplicación móvil educativa para registrar equipos electromecánicos.
+Aplicacion movil educativa para registrar equipos electromecanicos.
 
-Está hecha con React Native, Expo y JavaScript.
+Esta hecha con React Native, Expo y JavaScript.
 
 ## Iniciar el proyecto
 
-Abre una terminal en la carpeta del proyecto y ejecuta:
+1. Abre una terminal en la carpeta del proyecto.
+2. Ejecuta `npm install`.
+3. Ejecuta `npx expo start -c`.
+4. Escanea el codigo QR con Expo Go.
 
-```powershell
-npm install
-npx expo start -c
-```
+## Inicio de sesion
 
-Después escanea el código QR desde Expo Go.
-
-## Inicio de sesión
-
-```text
-Usuario: cicfelipe
-Contraseña: cicfelipepass
-```
+Usuario: cicfelipe  
+Contrasena: cicfelipepass
 
 ## Funciones principales
 
-- Inicio de sesión seguro.
-- Menú lateral y pestañas de navegación.
-- Registro, edición y eliminación de equipos.
+- Inicio de sesion seguro.
+- Menu lateral y pestañas de navegacion.
+- Registro, edicion y eliminacion de equipos.
 - Guardado local con SQLite.
-- Consulta de API REST.
+- Consulta de una API REST.
 - Funcionamiento sin internet.
-- Sincronización al recuperar la conexión.
+- Sincronizacion al recuperar la conexion.
 - Alertas para equipos en falla.
 - Modo claro y oscuro.
-- Adaptación a diferentes tamaños de pantalla.
+- Adaptacion a diferentes tamaños de pantalla.
 
 ## Prueba sin internet
 
-1. Desactiva el Wi-Fi y los datos móviles.
+1. Desactiva el Wi-Fi y los datos moviles.
 2. Registra o edita un equipo.
-3. Comprueba que el cambio aparezca en la aplicación.
+3. Comprueba que el cambio aparezca en la aplicacion.
 4. Activa nuevamente internet.
-5. Regresa a la pantalla de equipos para permitir la sincronización.
+5. Regresa a la pantalla de equipos para permitir la sincronizacion.
 
-## Tecnologías
+## Tecnologias utilizadas
 
 - React Native.
 - Expo SDK 54.
@@ -54,66 +48,15 @@ Contraseña: cicfelipepass
 - API de prueba DummyJSON.
 
 DummyJSON se utiliza con fines educativos. Sus cambios remotos son simulados,
-por eso SQLite conserva los datos de la aplicación en el teléfono.
+por eso SQLite conserva los datos de la aplicacion en el telefono.
 
-## Estructura básica
+## Estructura basica
 
-```text
 App.js
 src/
-├── context/
-├── database/
-├── navigation/
-├── screens/
-├── services/
-└── theme/
-```
-
-Modificar este README no afecta el funcionamiento de la aplicación.
-
-## Historial de commits
-
-Los commits son puntos de guardado del proyecto. Sirven para demostrar cómo se
-fue construyendo la aplicación y permiten volver a una versión anterior.
-
-Para crear un historial:
-
-```powershell
-git init
-git add .
-git commit -m "Crear proyecto Expo y navegación"
-```
-
-Después de cada etapa importante:
-
-```powershell
-git add .
-git commit -m "Agregar autenticación"
-```
-
-Ejemplos de commits para este proyecto:
-
-```text
-Crear proyecto Expo y navegación
-Agregar autenticación con SecureStore
-Agregar base de datos SQLite
-Conectar API REST
-Agregar funcionamiento offline
-Agregar interfaz adaptable y accesible
-Agregar edición con modal
-Finalizar documentación
-```
-
-Para ver el historial:
-
-```powershell
-git log --oneline
-```
-
-Si quieres guardar el proyecto en GitHub:
-
-```powershell
-git branch -M main
-git remote add origin https://github.com/TU_USUARIO/TU_REPOSITORIO.git
-git push -u origin main
-```
+  context/
+  database/
+  navigation/
+  screens/
+  services/
+  theme/
