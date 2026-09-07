@@ -16,6 +16,7 @@ export const AlertsScreen = () => {
   const colors = getColors(useColorScheme());
   const [alerts, setAlerts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const alertStatuses = ['en falla', 'fuera de servicio', 'en mantenimiento'];
 
   const loadAlerts = useCallback(async () => {
     try {
@@ -23,9 +24,10 @@ export const AlertsScreen = () => {
       const rows = await equipmentRepository.getAll();
       setAlerts(
         rows.filter(
-          (item) =>
-            item.status.toLowerCase() === 'en falla' ||
-            item.sync_status !== 'synced'
+          (item) => {
+            const status = item.status.trim().toLowerCase();
+            return alertStatuses.includes(status) || item.sync_status !== 'synced';
+          }
         )
       );
     } finally {
@@ -60,8 +62,8 @@ export const AlertsScreen = () => {
                 {item.name}
               </Text>
               <Text style={{ color: colors.text }}>
-                {item.status.toLowerCase() === 'en falla'
-                  ? 'Equipo en falla'
+                {alertStatuses.includes(item.status.trim().toLowerCase())
+                  ? `Estado: ${item.status}`
                   : 'Pendiente de sincronizar'}
               </Text>
             </View>
