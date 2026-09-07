@@ -37,6 +37,17 @@ Contrasena: cicfelipepass
 4. Activa nuevamente internet.
 5. Regresa a la pantalla de equipos para permitir la sincronizacion.
 
+## Videos demostrativos
+
+Los videos de evidencia estan disponibles en la siguiente carpeta de Google Drive:
+
+[Ver videos demostrativos](https://drive.google.com/drive/folders/1gzNr548bxN_GJYuBSjA0eiDQ0OxIQrHg?usp=drive_link)
+
+La carpeta contiene dos videos:
+
+- **Video 1:** inicio del proyecto desde PowerShell.
+- **Video 2:** inicio de sesion, navegacion, registro de equipos, modo offline y modo oscuro.
+
 ## Tecnologias utilizadas
 
 - React Native.
